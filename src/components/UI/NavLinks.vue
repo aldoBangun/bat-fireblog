@@ -7,6 +7,7 @@
          right-0
          w-80
          p-8
+         z-50
          transform
          transition
          transition-200
