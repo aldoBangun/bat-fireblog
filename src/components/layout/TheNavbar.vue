@@ -5,7 +5,7 @@
          <div class="text-2xl text-black font-brand">
             <router-link :to="{ name: 'home' }">Bat Fireblogs</router-link>
          </div>
-         <NavLinks :items="links" :isActive="isActive" @toggle-nav="toggleNav" />
+         <NavLinks :items="links" />
          <BIconList class="cursor-pointer text-2xl md:hidden" @click="toggleNav" />
       </nav>
    </header>
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import NavLinks from '../UI/NavLinks.vue'
 import { BIconList } from 'bootstrap-icons-vue'
 
@@ -21,33 +23,14 @@ export default {
       NavLinks,
       BIconList
    },
-   data() {
-      return {
-         links: [
-         {
-            label: 'Home',
-            link: '#'
-         },
-         {
-            label: 'Blogs',
-            link: '#'
-         },
-         {
-            label: 'Create Post',
-            link: '#'
-         },
-         {
-            label: 'Sign Up',
-            link: '#',
-            button: true
-         }
-            ],
-         isActive: false
-      }
+   computed: {
+      ...mapGetters({
+         links: 'navMenu'
+      })
    },
    methods: {
       toggleNav() {
-         this.isActive = !this.isActive
+         this.$store.commit('SET_ACTIVE_NAV', true)
       }
    }
 }

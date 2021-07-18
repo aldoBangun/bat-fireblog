@@ -47,6 +47,7 @@
 
 <script>
 import { BIconX } from 'bootstrap-icons-vue'
+import { mapGetters } from 'vuex'
 
 export default {
    components: {
@@ -57,20 +58,18 @@ export default {
          type: Array,
          required: true,
       },
-      isActive: {
-         type: Boolean,
-         required: false,
-         default: true
-      }
    },
    computed: {
+      ...mapGetters({
+         isActive: 'isActiveNav'
+      }),
       isHiddenNav() {
          return this.isActive ? '' : 'translate-x-full'
       }
    },
    methods: {
       toggleNav() {
-         this.$emit('toggle-nav')
+         this.$store.commit('SET_ACTIVE_NAV', false)
       }
    }
 };
