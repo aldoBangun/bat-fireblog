@@ -1,16 +1,13 @@
 <template>
-   <div class="container">
-      <QuillEditor theme="snow" />      
-   </div>
+   <PostRecent />
 </template>
 
 <script>
-import { QuillEditor } from '@vueup/vue-quill'
-import '@vueup/vue-quill/dist/vue-quill.snow.css';
+import PostRecent from '../PostRecent.vue'
 
 export default {
    components: {
-      QuillEditor
+      PostRecent
    }
 }
 </script>
