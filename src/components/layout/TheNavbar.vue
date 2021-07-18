@@ -1,6 +1,6 @@
 <template>
 
-   <header class="flex items-center h-16 border-b border-solid border-gray-300">
+   <header class="flex items-center h-16 border-b border-solid border-gray-300 mb-8">
       <nav class="container flex items-center justify-between">
          <div class="text-2xl text-black font-brand">
             <router-link :to="{ name: 'home' }">Bat Fireblogs</router-link>
