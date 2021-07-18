@@ -1,0 +1,31 @@
+{
+  "name": "bat-fireblog",
+  "private": true,
+  "version": "1.0.0",
+  "author": {
+    "name": "Aldo Bangun",
+    "email": "punk.aldo68@gmail.com"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.5",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
+    "vite": "^2.4.2"
+  },
+  "dependencies": {
+    "@vueup/vue-quill": "^1.0.0-beta.7",
+    "bootstrap-icons-vue": "^0.7.0",
+    "firebase": "^8.7.1",
+    "quill": "^1.3.7",
+    "quill-image-resize-module": "^3.0.0",
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
+  }
+}
